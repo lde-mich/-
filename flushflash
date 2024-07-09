@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Definisci il nome del display, puoi trovarlo eseguendo `xrandr` senza argomenti
+DISPLAY_NAME=$(xrandr | grep " connected" | cut -f1 -d " ")
+
+# Controlla se il display è stato trovato
+if [ -z "$DISPLAY_NAME" ]; then
+    echo "Nessun display trovato. Assicurati che il display sia connesso."
+    exit 1
+fi
+
+# Numero di lampeggiamenti
+NUM_FLASHES=5
+
+# Durata di ogni lampeggio (in secondi)
+FLASH_DURATION=0.5
+
+for i in $(seq 1 $NUM_FLASHES); do
+    # Spegne il display
+    xrandr --output $DISPLAY_NAME --off
+    sleep $FLASH_DURATION
+    
+    # Accende il display
+    xrandr --output $DISPLAY_NAME --auto
+    sleep $FLASH_DURATION
+done
+
+echo "Lampeggiamento completato."
+
