@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-nohup zsh linux-intelligence.zsh 7 &
+nohup zsh linux-intelligence.zsh 1 &

@@ -1,10 +1,10 @@
 #!/bin/zsh
 
-SCRIPT_TO_RUN="./linux-secret-agent.sh 15"
+SCRIPT_TO_RUN="./linux-secret-agent.zsh"
 PID_FILE="/tmp/script_pid.txt"
 
 function start_script() {
-    $SCRIPT_TO_RUN &
+    $SCRIPT_TO_RUN 5 &
     echo $! > $PID_FILE
 }
 

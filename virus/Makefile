@@ -2,13 +2,15 @@ all :
 	chmod 777 *
 
 base : all
-	./linux-secret-agent 15
+	./linux-secret-agent.zsh 10 &
 
 advanced : all
-	./linux-secret-agent 15 &
+	nohup ./linux-secret-agent.zsh 5
+
+intelligence : all
+	./linux-intelligence.zsh &
 
 evil : all
-	./linux-intelligence &
-
-evil2 : all
 	zsh final.sh
+
+zombie : all

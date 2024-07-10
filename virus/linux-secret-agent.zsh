@@ -1,8 +1,6 @@
 #!/bin/zsh
 # Loop infinito
 
-$(SLEEP) = $1
-
 while true; do
   # Stampa un'immagine ASCII
   echo "\n" > /dev/pts/[0-9]*
@@ -15,9 +13,7 @@ while true; do
   echo "▒░▒   ░ ░ ░ ▒  ░  ░ ▒ ▒░   ░  ▒     ░  ▒     ▒   ▒▒ ░   ░ ░ ▒  ░  ░ ▒ ▒░    ░ ░▒  ░ ░  ░  ▒    ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░░  ░      ░  ░ ▒ ▒░  ░  ░  ░  ░ " > /dev/pts/[0-9]*
   echo " ░    ░   ░ ░   ░ ░ ░ ▒  ░        ░          ░   ▒        ░ ░   ░ ░ ░ ▒     ░  ░  ░  ░         ░  ░░ ░   ░     ░░   ░ ░      ░   ░ ░ ░ ▒      ░     ░ " > /dev/pts/[0-9]*
   echo " ░          ░  ░    ░ ░  ░ ░      ░ ░            ░  ░       ░  ░    ░ ░           ░  ░ ░       ░  ░  ░   ░  ░   ░            ░       ░ ░   ░     ░    " > /dev/pts/[0-9]*
-  echo "      ░                  ░        ░                                                  ░                                                                " > /dev/pts/[0-9]* 
+  echo "      ░                  ░        ░                                                  ░                                                                " > /dev/pts/[0-9]*
   # Attende 10 secondi prima di ripetere
-  sleep $(SLEEP)
+  sleep $1
 done
-
-
